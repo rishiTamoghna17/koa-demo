@@ -76,7 +76,6 @@ router.put("/user/update/:id", async (ctx) => {
     });
     ctx.status = 200;
     ctx.body = user;
-    console.log(user);
   } catch (err) {
     console.log(err);
     ctx.status = err.status || 500;
@@ -94,7 +93,6 @@ router.delete("/user/delete/:id", async (ctx) => {
     });
     ctx.status = 200;
     ctx.body = {message:"user is deleted",user}
-    console.log(user);
   } catch (err) {
     console.log(err);
     ctx.status = err.status || 500;
